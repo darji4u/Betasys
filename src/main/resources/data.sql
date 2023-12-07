@@ -1,0 +1,152 @@
+
+--------------------------------------------------------create Designation table ------------------------------------------------------------------------------------------------------------------------------------------------
+--create table betasys_Designations(id int auto_increment primary key,designation varchar(50));
+--Insert into betasys_Designations(designation) values("Software Engineer/Developer/Programmer"),
+--                ("Web Developer"),
+--                ("Mobile App Developer"),
+--                ("Full Stack Developer"),
+--                ("Front-end Developer"),
+--                ("Back-end Developer"),
+--                ("DevOps Engineer"),
+--                ("Data Scientist"),
+--                ("Data Analyst"),
+--                ("Systems Analyst"),
+--                ("IT Project Manager"),
+--                ("UI/UX Designer"),
+--                ("Quality Assurance (QA) Engineer"),
+--                ("Network Administrator"),
+--                ("Database Administrator"),
+--                ("Security Analyst"),
+--                ("IT Consultant"),
+--                ("IT Support Specialist"),
+--                ("IT Operations Manager"),
+--                ("Cloud Architect/Engineer"),
+--                ("Business Analyst"),
+--                ("Artificial Intelligence (AI) Engineer"),
+--                ("Machine Learning Engineer"),
+--                ("Robotics Engineer"),
+--                ("IT Trainer/Instructor"),
+--                ("IT Sales/Account Manager"),
+--                ("IT Director/Manager"),
+--                ("IT Executive/Chief Information Officer (CIO)"),
+--                ("IT Business Analyst"),
+--                ("IT Auditor"),
+--                ("IT Compliance Officer");
+--
+--
+------------------------------------------------------create Skill table ------------------------------------------------------------------------------------------------------------------------------------------------
+--
+--
+--create table betasys_ITSkills(id int auto_increment primary key,skill varchar(50));
+--Insert into betasys_ITSkills(skill) values('Time Management'),('Scope Management'),('Risk Management'),('Communication Skills'),('Leadership Skills'),('Problem-solving Skills'),('Stakeholder Management'),('Budget Management'),
+--  ('Quality Management'),('Agile Methodology'),('HTML/CSS'),('JavaScript'),('PHP'),('Python'),('Ruby'),('SQL'),('Responsive Web Design'),('Version Control (Git)'),('Content Management Systems (CMS)'),('Web Server Administration'),
+--  ('Java'),('Kotlin'),('Android SDK'),('Android Studio'),('XML'),('JSON'),('RESTful APIs'),('Firebase'),('Material Design'),('Unit Testing'),('Swift'),('Objective-C'),
+--  ('Xcode'),('Interface Builder'),('iOS SDK'),('Core Data'),('Cocoa Touch'),('Auto Layout'),('App Store Deployment'),('TestFlight'),('C++'),('Java'),('C#'),('Python'),('Qt'),
+--  ('.NET Framework'),('Windows Forms'),('WPF (Windows Presentation Foundation)'),('macOS Development (Cocoa)'),('User Interface Design'),('Test Planning'),('Test Execution'),('Test Case Design'),('Test Automation'),
+--  ('Test Documentation'),('Regression Testing'),('Functional Testing'),('Performance Testing'),('User Acceptance Testing (UAT)'),('Defect Tracking');
+--
+--
+--
+-------------------------------------------------------create Tag table --------------------------------------------------------------------------------------------
+--
+--    create table betasys_tags(
+--        TAG_ID INT PRIMARY KEY AUTO_INCREMENT,
+--        TAG_NAME varchar(50)
+--    );
+--    INSERT INTO betasys_tags(TAG_NAME) values('New feature'),('Bug');
+--
+--
+--
+--
+--
+--
+--
+--  ----------------------------------------------------create user table ------------------------------------------------------------------------------------------------------------------------------------------------
+--
+--  CREATE TABLE betasys_USER_MASTER(
+--    USER_ID INT AUTO_INCREMENT PRIMARY KEY,
+--    USER_NAME varchar(20),
+--    FULL_NAME varchar(50),
+--    EMAIL varchar(50),
+--    GENDER varchar(1),
+--    DESIGNATION varchar(50),
+--    USER_PASSWORD varchar(100),
+--    IS_ENABLE varchar(10),
+--    USER_STATUS varchar(10),
+--    USER_PROFILE BLOB(5000),
+--    SKILLS varchar(1000)
+--  ) AUTO_INCREMENT=100001;
+--
+--
+--  --------------------------------------------------create project table -----------------------------------------------------------------------------------------
+--
+--  CREATE TABLE betasys_projects(
+--        PROJECT_ID INT auto_increment primary key,
+--        PROJECT_NAME varchar(100),
+--        DESCRIPTION varchar(5000),
+--        PROJECT_LOGO BLOB,
+--        CREATED_ON TIMESTAMP,
+--        CREATED_BY INT
+--  );
+----
+--  create table betasys_project_collaborator(
+--        ID INT auto_increment primary key,
+--        COLLABORATOR_ID INT,
+--        PROJECT_ID INT,
+--        DESIGNATION varchar(10)
+--  );
+--
+----
+--  create table betasys_documents(
+--         ID INT auto_increment primary key,
+--         BELONGS_TO_ID INT,
+--         BELONGS_TO VARCHAR(50 ),
+--         FILE LONGBLOB,
+--         FILE_NAME varchar(200),
+--         FILE_TYPE varchar(100),
+--         CREATED_ON TIMESTAMP
+--  );
+--
+--CREATE TABLE betasys_modules(
+--	MODULE_ID integer primary key auto_increment,
+--    MODULE_NAME varchar(100),
+--    CREATED_BY INT,
+--    PARENT_MODULE integer,
+--    CREATED_ON DATE,
+--    PROJECT_ID INT
+--)AUTO_INCREMENT=1001;
+--
+--
+--CREATE TABLE betasys_task_master(
+--	TASK_ID INT auto_increment PRIMARY KEY,
+--    TASK_NAME VARCHAR(200),
+--    TASK_DESCRIPTION LONGTEXT,
+--    REMARK VARCHAR(300),
+--    TAGS varchar(100),
+--    PRIORITY TINYINT,
+--    MODULE_ID INT,
+--    PROJECT_ID INT,
+--    CREATED_BY INT,
+--    CREATED_ON TIMESTAMP,
+--    DEADLINE TIMESTAMP,
+--    PARENT_TASK_ID INT
+--)AUTO_INCREMENT=1001;
+--------
+--------
+--CREATE TABLE betasys_task_assignee(
+--	ID INT AUTO_INCREMENT PRIMARY KEY,
+--    TASK_ID INT,
+--    ASSIGNEE_ID INT,
+--    SEEN BIT,
+--    TASK_STATUS CHAR(2),
+--);
+
+--CREATE TABLE betasys_work_efforts(
+--    ID INT AUTO_INCREMENT PRIMARY KEY,
+--    WORK_ID INT,
+--    USER_ID INT,
+--    WORK_TYPE VARCHAR(20),
+--    STATUS VARCHAR(20),
+--    START_TIME TIMESTAMP,
+--    FINISH_TIME TIMESTAMP
+--);
